@@ -146,38 +146,6 @@ GET /api/Produtos
 ```http
 GET /api/Produtos/{id}
 ```
-
----
-
-# 📂 Estrutura do Projeto
-
-```
-VoxTech/
-│
-├── FrontEnd/
-│   ├── index.html
-│   ├── produto.html
-│   ├── login.html
-│   ├── cadastro.html
-│   ├── perfil.html
-│   ├── carrinho.html
-│   ├── checkout.html
-│   ├── style.css
-│   └── script.js
-│
-├── API/
-│   ├── Controllers/
-│   ├── Models/
-│   ├── Data/
-│   ├── Services/
-│   └── Program.cs
-│
-└── Banco/
-    └── SQL Server
-```
-
----
-
 # ⚙️ Como Executar
 
 ## Banco de Dados
