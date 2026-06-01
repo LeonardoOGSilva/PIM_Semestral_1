@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxTech - Acessibilidade</title>
+    <!-- Fontes de ícones e estilos gerais do site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho principal com navegação de produto, busca e acesso rápido a perfis -->
+    <header class="header">
+        <a href="index.html" class="logo">Vox<span>Tech</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="favoritos.html" style="color: inherit;"><i class="fas fa-heart" title="Favoritos"></i></a>
+            <a href="acessibilidade.html" style="color: inherit;"><i class="fas fa-universal-access" title="Acessibilidade"></i></a>
+            <a href="carrinho.html" style="color: inherit;"><i class="fas fa-shopping-cart" title="Carrinho"></i></a>
+            <a href="login.html" style="color: inherit;"><i class="fas fa-user" title="Perfil"></i></a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <nav class="sub-nav">
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </nav>
+
+        <!-- Seção de acessibilidade com controles de ajuste de fonte -->
+        <section class="acessibilidade-section">
+            <div class="acessibilidade-header">
+                <h2><i class="fas fa-universal-access"></i> Acessibilidade VoxTech</h2>
+                <p>Nossa loja está comprometida em oferecer a melhor experiência para todos os usuários.</p>
+            </div>
+
+            <div class="acessibilidade-cards">
+                <div class="access-card" style="max-width: 500px; margin: 0 auto;">
+                    <i class="fas fa-text-height access-icon"></i>
+                    <h3>Tamanho do Texto</h3>
+                    <p>Ajuste o tamanho das letras para facilitar a leitura se você possuir baixa visão.</p>
+                    <div class="access-buttons">
+                        <button id="btn-diminuir-fonte" class="btn-access">A- (Diminuir Fonte)</button>
+                        <button id="btn-normal-fonte" class="btn-access">A (Tamanho normal)</button>
+                        <button id="btn-aumentar-fonte" class="btn-access">A+ (Aumentar Fonte)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-area" style="margin-top: 40px;">
+                <h3>Área de Teste Visual</h3>
+                <p>Ao clicar nos botões acima, você verá o tamanho das letras deste bloco mudarem, assim como em todo o resto do site VoxTech.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Rodapé com informações de marca, atendimento, políticas e formas de pagamento -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Vox<span>Tech</span></h3>
+                <p>A sua loja definitiva de hardware e periféricos de alta performance. Desenvolvido para gamers e profissionais exigentes.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Pagamento</h3>
+                <p>Aceitamos as principais bandeiras:</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoxTech Eletrônicos Ltda. Todos os direitos reservados. Projeto Acadêmico UNIP (PIM).</p>
+        </div>
+    </footer>
+    <!-- Plugin VLibras para tradução de conteúdo em Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Script principal do site que aplica comportamentos e ajustes de interface -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>VoxTech - Meus Favoritos</title>
+
+    <!-- Biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Arquivo principal de estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícone da aplicação -->
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+
+    <!-- Estilos específicos da página de favoritos -->
+    <style>
+
+        /* Botão responsável por remover itens dos favoritos */
+        .btn-remover-favorito {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--surface);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            z-index: 2;
+        }
+
+        /* Efeito visual ao passar o mouse sobre o botão */
+        .btn-remover-favorito:hover {
+            color: var(--red-primary);
+            border-color: var(--red-primary);
+            box-shadow: 0 0 10px var(--red-glow);
+        }
+
+        /* Permite posicionamento absoluto dos elementos internos */
+        .produto-card {
+            position: relative;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Cabeçalho principal -->
+    <header class="header">
+
+        <!-- Logo da loja -->
+        <a href="index.html" class="logo">
+            Vox<span>Tech</span>
+        </a>
+
+        <!-- Campo de pesquisa -->
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Menu de atalhos -->
+        <div class="header-icons">
+
+            <a href="favoritos.html" style="color: inherit;">
+                <i class="fas fa-heart" title="Favoritos"></i>
+            </a>
+
+            <a href="acessibilidade.html" style="color: inherit;">
+                <i class="fas fa-universal-access" title="Acessibilidade"></i>
+            </a>
+
+            <a href="carrinho.html" style="color: inherit;">
+                <i class="fas fa-shopping-cart" title="Carrinho"></i>
+            </a>
+
+            <a href="login.html" style="color: inherit;">
+                <i class="fas fa-user" title="Perfil"></i>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+
+        <!-- Botão para retornar à página anterior -->
+        <nav class="sub-nav">
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+
+        </nav>
+
+        <!-- Título da seção de favoritos -->
+        <h2 style="font-size: 28px; margin-bottom: 30px; margin-top: 20px;">
+            Meus Favoritos
+            <i class="fas fa-heart" style="color: var(--red-primary);"></i>
+        </h2>
+
+        <!-- Grade de produtos favoritados -->
+        <section class="produtos-grid">
+
+            <!-- Produto favorito: Notebook -->
+            <div class="produto-card">
+
+                <button class="btn-remover-favorito" title="Remover">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+
+                <img
+                    src="Imagens/notebook-acer-nitro.png"
+                    alt="Notebook Acer Nitro"
+                    class="img-produto"
+                    style="cursor: pointer;"
+                    onclick="window.location.href='produto.html'">
+
+                <div class="info-produto">
+                    <h3>Notebook Acer Nitro V15</h3>
+                    <p class="preco">R$ 7.699,00</p>
+
+                    <button
+                        class="btn-comprar"
+                        onclick="window.location.href='carrinho.html'">
+
+                        Colocar no Carrinho
+
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Produto favorito: Headset -->
+            <div class="produto-card">
+
+                <button class="btn-remover-favorito" title="Remover">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+
+                <img
+                    src="Imagens/HeadsetGamer.png"
+                    alt="Headset Gamer"
+                    class="img-produto"
+                    style="cursor: pointer;"
+                    onclick="window.location.href='produto.html'">
+
+                <div class="info-produto">
+                    <h3>Headset Gamer 7.1</h3>
+                    <p class="preco">R$ 280,00</p>
+
+                    <button
+                        class="btn-comprar"
+                        onclick="window.location.href='carrinho.html'">
+
+                        Colocar no Carrinho
+
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Produto favorito: Mouse -->
+            <div class="produto-card">
+
+                <button class="btn-remover-favorito" title="Remover">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+
+                <img
+                    src="Imagens/MouseGamer.png"
+                    alt="Mouse Gamer"
+                    class="img-produto"
+                    style="cursor: pointer;"
+                    onclick="window.location.href='produto.html'">
+
+                <div class="info-produto">
+                    <h3>Mouse Gamer Pro 16k DPI</h3>
+                    <p class="preco">R$ 150,00</p>
+
+                    <button
+                        class="btn-comprar"
+                        onclick="window.location.href='carrinho.html'">
+
+                        Colocar no Carrinho
+
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé institucional -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Informações da empresa -->
+            <div class="footer-column">
+
+                <h3>Vox<span>Tech</span></h3>
+
+                <p>
+                    A sua loja definitiva de hardware e periféricos de alta performance.
+                    Desenvolvido para gamers e profissionais exigentes.
+                </p>
+
+                <!-- Redes sociais -->
+                <div class="footer-socials">
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Links de atendimento -->
+            <div class="footer-column">
+
+                <h3>Atendimento</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Links institucionais -->
+            <div class="footer-column">
+
+                <h3>Institucional</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Métodos de pagamento -->
+            <div class="footer-column">
+
+                <h3>Pagamento</h3>
+
+                <p>Aceitamos as principais bandeiras:</p>
+
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Informações de direitos autorais -->
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 VoxTech Eletrônicos Ltda.
+                Todos os direitos reservados.
+                Projeto Acadêmico UNIP (PIM).
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Plugin de acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Script principal da aplicação -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxTech - Finalizar Pedido</title>
+    <!-- Ícones e estilo base usados em todas as páginas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header global com marca, busca e atalhos de navegação -->
+    <header class="header">
+        <a href="index.html" class="logo">Vox<span>Tech</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="favoritos.html" style="color: inherit;"><i class="fas fa-heart" title="Favoritos"></i></a>
+            <a href="acessibilidade.html" style="color: inherit;"><i class="fas fa-universal-access" title="Acessibilidade"></i></a>
+            <a href="carrinho.html" style="color: inherit;"><i class="fas fa-shopping-cart" title="Carrinho"></i></a>
+            <a href="perfil.html" style="color: inherit;"><i class="fas fa-user" title="Perfil"></i></a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <nav class="sub-nav" style="margin-bottom: 20px;">
+            <a href="carrinho.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar ao Carrinho</a>
+        </nav>
+
+        <h2 style="font-size: 2rem; color: var(--red-primary); margin-bottom: 30px;">Finalizar Pedido</h2>
+
+        <!-- Layout principal do checkout com formulário e resumo do pedido -->
+        <div class="checkout-layout">
+            
+            <div class="checkout-forms">
+                
+                <!-- Seção de entrega com campos de endereço do cliente -->
+                <section class="checkout-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Endereço de Entrega</h3>
+                    <div class="form-row">
+                        <div class="form-group"><label>Nome Completo</label><input type="text" value="Gustavo Henrique"></div>
+                        <div class="form-group"><label>Telefone</label><input type="text" placeholder="(11) 99999-9999"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>CEP</label><input type="text" placeholder="00000-000"></div>
+                        <div class="form-group" style="flex: 2;"><label>Rua / Avenida</label><input type="text" placeholder="Ex: Av. Paulista"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Número</label><input type="text"></div>
+                        <div class="form-group"><label>Complemento</label><input type="text" placeholder="Apto, Bloco"></div>
+                        <div class="form-group"><label>Bairro</label><input type="text"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 2;"><label>Cidade</label><input type="text" value="São Paulo"></div>
+                        <div class="form-group"><label>Estado</label><input type="text" value="SP"></div>
+                    </div>
+                </section>
+
+                <!-- Seção de pagamento permitindo escolha entre cartão ou Pix -->
+                <section class="checkout-section">
+                    <h3><i class="fas fa-wallet"></i> Forma de Pagamento</h3>
+                    
+                    <div class="payment-options">
+                        <label class="payment-method">
+                            <input type="radio" name="pagamento" value="cartao" checked>
+                            <i class="fas fa-credit-card"></i> Cartão de Crédito
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="pagamento" value="pix">
+                            <i class="fab fa-pix"></i> Pix
+                        </label>
+                    </div>
+
+                    <div id="form-cartao" class="payment-form active">
+                        <div class="form-group"><label>Número do Cartão</label><input type="text" placeholder="0000 0000 0000 0000"></div>
+                        <div class="form-group"><label>Nome Impresso no Cartão</label><input type="text" placeholder="GUSTAVO H S SOUZA"></div>
+                        <div class="form-row">
+                            <div class="form-group"><label>Validade</label><input type="text" placeholder="MM/AA"></div>
+                            <div class="form-group"><label>CVV</label><input type="text" placeholder="123"></div>
+                            <div class="form-group" style="flex: 2;">
+                                <label>Parcelas</label>
+                                <select style="width: 100%; padding: 12px; background: var(--bg-dark); color: white; border: 1px solid var(--border-color); border-radius: 8px;">
+                                    <option>1x de R$ 7.699,00 sem juros</option>
+                                    <option>10x de R$ 769,90 sem juros</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="form-pix" class="payment-form" style="display: none; text-align: center; padding: 20px;">
+                        <i class="fab fa-pix" style="font-size: 3rem; color: #32BCAD; margin-bottom: 15px;"></i>
+                        <h4 style="margin-bottom: 10px;">Pagamento rápido e seguro</h4>
+                        <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 20px;">Ao finalizar a compra, um QR Code e um código "Copia e Cola" serão gerados para você pagar no aplicativo do seu banco.</p>
+                        <div style="background-color: var(--bg-dark); padding: 15px; border-radius: 8px; border: 1px dashed var(--red-primary); color: var(--red-primary); font-weight: bold;">
+                            Aprovação Imediata
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <!-- Resumo do pedido com valores e botão de confirmação -->
+            <aside class="checkout-summary">
+                <h3>Resumo do Pedido</h3>
+                
+                <div class="summary-items">
+                    <div class="summary-item">
+                        <span>Notebook Acer Nitro V15 (x1)</span>
+                        <span>R$ 7.699,00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Frete (Padrão)</span>
+                        <span>R$ 12,90</span>
+                    </div>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total a pagar</span>
+                    <span class="total-price">R$ 7.711,90</span>
+                </div>
+
+                <button class="btn-primary" style="font-size: 1.125rem; padding: 15px; margin-top: 20px;" onclick="alert('Pedido Finalizado com Sucesso! Obrigado por comprar na VoxTech.')">Finalizar Pedido</button>
+                <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 15px;"><i class="fas fa-lock"></i> Ambiente 100% Seguro</p>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Vox<span>Tech</span></h3>
+                <p>A sua loja definitiva de hardware e periféricos de alta performance. Desenvolvido para gamers e profissionais exigentes.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Pagamento</h3>
+                <p>Aceitamos as principais bandeiras:</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoxTech Eletrônicos Ltda. Todos os direitos reservados. Projeto Acadêmico UNIP (PIM).</p>
+        </div>
+    </footer>
+    <!-- Plugin VLibras para tradução de conteúdo em Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Script principal do site, responsável por interações e ajustes de interface -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VoxTech - Login</title>
+
+    <!-- Ícones Font Awesome e estilos compartilhados do site -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho da página com logo, barra de busca e controle de sessão -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            Vox<span>Tech</span>
+        </a>
+
+        <div class="search-bar">
+
+            <input type="text" placeholder="Busque aqui...">
+
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+
+        </div>
+
+        <div class="header-icons">
+
+            <a href="favoritos.html" style="color: inherit;">
+                <i class="fas fa-heart"></i>
+            </a>
+
+            <a href="carrinho.html" style="color: inherit;">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+
+            <a href="login.html"
+                class="profile-link logout"
+                onclick="localStorage.removeItem('usuarioId'); localStorage.removeItem('usuarioNome');">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="main-content" style="padding: 0;">
+
+        <!-- Navegação secundária para retornar à loja -->
+        <nav class="sub-nav">
+
+            <a href="index.html" class="back-button">
+
+                <i class="fas fa-arrow-left"></i>
+
+                Voltar à Loja
+
+            </a>
+
+        </nav>
+
+        <!-- Área de autenticação com formulário de login do usuário -->
+        <div class="auth-wrapper">
+
+            <div class="auth-card">
+
+                <h2 class="auth-title">
+                    Acesse sua Conta
+                </h2>
+
+                <div class="form-group">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        required>
+
+                </div>
+
+                <div class="auth-options">
+
+                    <div class="checkbox-group">
+
+                        <input type="checkbox" id="lembrar">
+
+                        <label for="lembrar"
+                               style="margin: 0;">
+
+                            Lembrar de mim
+
+                        </label>
+
+                    </div>
+
+                    <a href="#">
+                        Esqueceu a senha?
+                    </a>
+
+                </div>
+
+                <button
+                    class="btn-primary"
+                    id="btn-login">
+
+                    Entrar
+
+                </button>
+
+                <div style="text-align: center; margin-top: 20px;">
+
+                    <span style="color: var(--text-muted); font-size: 14px;">
+
+                        Ainda não tem conta?
+
+                    </span>
+
+                    <a href="cadastro.html"
+                       style="color: var(--red-primary);
+                              text-decoration: none;
+                              font-weight: bold;
+                              font-size: 14px;
+                              margin-left: 5px;">
+
+                        Cadastre-se
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé simples com crédito do projeto acadêmico -->
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 VoxTech Eletrônicos Ltda.
+                Todos os direitos reservados.
+                Projeto Acadêmico UNIP (PIM).
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Script principal do site para controle de interações e login -->
+    <script src="script.js"></script>
+
+</body>
+</html>

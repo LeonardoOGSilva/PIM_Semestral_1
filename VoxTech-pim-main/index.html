@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxTech - Home</title>
+    <!-- Ícones Font Awesome e estilos globais do site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho com logo, pesquisa e navegação rápida para funcionalidades principais -->
+    <header class="header">
+        <a href="index.html" class="logo">Vox<span>Tech</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="favoritos.html" style="color: inherit;"><i class="fas fa-heart" title="Favoritos"></i></a>
+            <a href="acessibilidade.html" style="color: inherit;"><i class="fas fa-universal-access" title="Acessibilidade"></i></a>
+            <a href="carrinho.html" style="color: inherit;"><i class="fas fa-shopping-cart" title="Carrinho"></i></a>
+            <a href="login.html" style="color: inherit;"><i class="fas fa-user" title="Perfil"></i></a>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- Seção de destaque com carrossel rotativo de banners promocionais -->
+        <section class="banner-section">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="Imagens/Banner 1.jpeg" alt="Banner 1" class="carousel-image">
+                    <img src="Imagens/Banner 2.jpeg" alt="Banner 2" class="carousel-image">
+                    <img src="Imagens/Banner 3.jpeg" alt="Banner 3" class="carousel-image">
+                </div>
+
+                <button id="prevBtn" class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextBtn" class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="banner-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- Seção de categorias com filtros rápidos por segmento de produto -->
+        <section class="categorias">
+            <div class="cat-item" onclick="filtrarCategoria('Periféricos')">
+                <div class="cat-icon"><i class="fas fa-mouse"></i></div>
+                <span>Periféricos</span>
+            </div>
+
+            <div class="cat-item" onclick="filtrarCategoria('Hardware')">
+                <div class="cat-icon"><i class="fas fa-microchip"></i></div>
+                <span>Hardware</span>
+            </div>
+
+            <div class="cat-item" onclick="filtrarCategoria('Computadores')">
+                <div class="cat-icon"><i class="fas fa-laptop"></i></div>
+                <span>Computadores</span>
+            </div>
+
+            <div class="cat-item" onclick="filtrarCategoria('Games')">
+                <div class="cat-icon"><i class="fas fa-gamepad"></i></div>
+                <span>Games</span>
+            </div>
+
+            <div class="cat-item" onclick="filtrarCategoria('Celulares')">
+                <div class="cat-icon"><i class="fas fa-mobile-alt"></i></div>
+                <span>Celulares</span>
+            </div>
+
+            <div class="cat-item" onclick="filtrarCategoria('Televisão')">
+                <div class="cat-icon"><i class="fas fa-tv"></i></div>
+                <span>Televisão</span>
+            </div>
+
+            <div class="cat-item" onclick="filtrarCategoria('Áudio')">
+                <div class="cat-icon"><i class="fas fa-volume-up"></i></div>
+                <span>Áudio</span>
+            </div>
+        </section>
+
+        <!-- Grade de produtos com cartões clicáveis para detalhes individuais -->
+        <section class="produtos-grid">
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=1'" style="cursor: pointer;">
+                <img src="Imagens/SSD1TB.png" alt="SSD 1TB M.2" class="img-produto">
+                <div class="info-produto">
+                    <h3>SSD 1TB NVMe M.2</h3>
+                    <p class="preco">R$ 450,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=2'" style="cursor: pointer;">
+                <img src="Imagens/PlacaMae.png" alt="Placa Mãe B550" class="img-produto">
+                <div class="info-produto">
+                    <h3>Placa Mãe Gamer B550</h3>
+                    <p class="preco">R$ 850,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=3'" style="cursor: pointer;">
+                <img src="Imagens/MemoriaRAM.png" alt="Memória RAM 16GB" class="img-produto">
+                <div class="info-produto">
+                    <h3>Memória RAM 16GB (2x8)</h3>
+                    <p class="preco">R$ 320,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=4'" style="cursor: pointer;">
+                <img src="Imagens/HeadsetGamer.png" alt="Headset Gamer" class="img-produto">
+                <div class="info-produto">
+                    <h3>Headset Gamer 7.1</h3>
+                    <p class="preco">R$ 280,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=5'" style="cursor: pointer;">
+                <img src="Imagens/MouseGamer.png" alt="Mouse Gamer" class="img-produto">
+                <div class="info-produto">
+                    <h3>Mouse Gamer Pro 16k DPI</h3>
+                    <p class="preco">R$ 150,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=6'" style="cursor: pointer;">
+                <img src="Imagens/TecladoMecanico.png" alt="Teclado Mecânico" class="img-produto">
+                <div class="info-produto">
+                    <h3>Teclado Mecânico Switch Red</h3>
+                    <p class="preco">R$ 220,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=7'" style="cursor: pointer;">
+                <img src="Imagens/KitReparo.png" alt="Kit de Ferramentas" class="img-produto">
+                <div class="info-produto">
+                    <h3>Kit de Ferramentas Manutenção</h3>
+                    <p class="preco">R$ 89,90</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+            <div class="produto-card" onclick="window.location.href='produto.html?id=8'" style="cursor: pointer;">
+                <img src="Imagens/CadeiraGamer.png" alt="Cadeira Gamer" class="img-produto">
+                <div class="info-produto">
+                    <h3>Cadeira Gamer Ergonômica</h3>
+                    <p class="preco">R$ 950,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé com informações da empresa, atendimento, links institucionais e formas de pagamento -->
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-column">
+                <h3>Vox<span>Tech</span></h3>
+                <p>A sua loja definitiva de hardware e periféricos de alta performance. Desenvolvido para gamers e profissionais exigentes.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Pagamento</h3>
+                <p>Aceitamos as principais bandeiras:</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoxTech Eletrônicos Ltda. Todos os direitos reservados. Projeto Acadêmico UNIP (PIM).</p>
+        </div>
+    </footer>
+    <!-- Plugin VLibras para tradução de conteúdo em Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Script principal do site para comportamentos e interações -->
+    <script src="script.js"></script>
+</body>
+</html>

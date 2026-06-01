@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>VoxTech - Periféricos</title>
+
+    <!-- Biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Arquivo principal de estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícone da aplicação -->
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho principal do site -->
+    <header class="header">
+
+        <!-- Logo da loja -->
+        <a href="index.html" class="logo">
+            Vox<span>Tech</span>
+        </a>
+
+        <!-- Barra de pesquisa de produtos -->
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Ícones de navegação rápida -->
+        <div class="header-icons">
+            <a href="favoritos.html" style="color: inherit;">
+                <i class="fas fa-heart" title="Favoritos"></i>
+            </a>
+
+            <a href="acessibilidade.html" style="color: inherit;">
+                <i class="fas fa-universal-access" title="Acessibilidade"></i>
+            </a>
+
+            <a href="carrinho.html" style="color: inherit;">
+                <i class="fas fa-shopping-cart" title="Carrinho"></i>
+            </a>
+
+            <a href="login.html" style="color: inherit;">
+                <i class="fas fa-user" title="Perfil"></i>
+            </a>
+        </div>
+
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main class="main-content">
+
+        <!-- Navegação de retorno para a página inicial -->
+        <nav class="sub-nav">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar à Home
+            </a>
+        </nav>
+
+        <!-- Cabeçalho da categoria -->
+        <div class="category-header">
+
+            <!-- Informações da categoria atual -->
+            <div>
+                <h2>Periféricos</h2>
+
+                <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 5px;">
+                    Mostrando 1-6 de 24 produtos
+                </p>
+            </div>
+
+            <!-- Campo para ordenação dos produtos -->
+            <div class="category-sort">
+
+                <label for="ordenar"
+                    style="color: var(--text-muted); font-size: 0.875rem; margin-right: 10px;">
+                    Ordenar por:
+                </label>
+
+                <select id="ordenar" class="sort-select">
+                    <option value="relevancia">Mais Relevantes</option>
+                    <option value="menor-preco">Menor Preço</option>
+                    <option value="maior-preco">Maior Preço</option>
+                    <option value="mais-vendidos">Mais Vendidos</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- Estrutura principal da categoria -->
+        <div class="category-layout">
+
+            <!-- Barra lateral de filtros -->
+            <aside class="filters-sidebar">
+
+                <!-- Filtro por tipo de periférico -->
+                <div class="filter-group">
+                    <h3>Categorias</h3>
+
+                    <label class="filter-item">
+                        <input type="checkbox" checked> Mouses (8)
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" checked> Teclados (5)
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox" checked> Headsets (7)
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> Webcams (4)
+                    </label>
+                </div>
+
+                <!-- Filtro por faixa de preço -->
+                <div class="filter-group">
+                    <h3>Preço</h3>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> Até R$ 100,00
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> R$ 100,00 a R$ 300,00
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> R$ 300,00 a R$ 500,00
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> Acima de R$ 500,00
+                    </label>
+                </div>
+
+                <!-- Filtro por fabricante -->
+                <div class="filter-group">
+                    <h3>Marcas</h3>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> Logitech
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> Redragon
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> HyperX
+                    </label>
+
+                    <label class="filter-item">
+                        <input type="checkbox"> Razer
+                    </label>
+                </div>
+
+                <!-- Botão para aplicar filtros selecionados -->
+                <button class="btn-primary" style="margin-top: 10px;">
+                    Aplicar Filtros
+                </button>
+
+            </aside>
+
+            <!-- Grade de produtos da categoria -->
+            <section class="produtos-grid" style="flex: 1;">
+
+                <!-- Produto: Headset -->
+                <div class="produto-card"
+                    onclick="window.location.href='produto.html'"
+                    style="cursor: pointer;">
+
+                    <img src="Imagens/HeadsetGamer.png"
+                        alt="Headset Gamer"
+                        class="img-produto">
+
+                    <div class="info-produto">
+                        <h3>Headset Gamer 7.1 HyperX</h3>
+                        <p class="preco">R$ 280,00</p>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Produto: Mouse -->
+                <div class="produto-card"
+                    onclick="window.location.href='produto.html'"
+                    style="cursor: pointer;">
+
+                    <img src="Imagens/MouseGamer.png"
+                        alt="Mouse Gamer"
+                        class="img-produto">
+
+                    <div class="info-produto">
+                        <h3>Mouse Gamer Pro 16k DPI</h3>
+                        <p class="preco">R$ 150,00</p>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Produto: Teclado -->
+                <div class="produto-card"
+                    onclick="window.location.href='produto.html'"
+                    style="cursor: pointer;">
+
+                    <img src="Imagens/TecladoMecanico.png"
+                        alt="Teclado Mecânico"
+                        class="img-produto">
+
+                    <div class="info-produto">
+                        <h3>Teclado Mecânico Switch Red</h3>
+                        <p class="preco">R$ 220,00</p>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Produto: Mousepad -->
+                <div class="produto-card"
+                    onclick="window.location.href='produto.html'"
+                    style="cursor: pointer;">
+
+                    <img src="Imagens/KitReparo.png"
+                        alt="Mousepad Extra Grande"
+                        class="img-produto">
+
+                    <div class="info-produto">
+                        <h3>Mousepad Extra Grande Speed</h3>
+                        <p class="preco">R$ 89,90</p>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé institucional -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Informações da empresa -->
+            <div class="footer-column">
+
+                <h3>Vox<span>Tech</span></h3>
+
+                <p>
+                    A sua loja definitiva de hardware e periféricos de alta performance.
+                    Desenvolvido para gamers e profissionais exigentes.
+                </p>
+
+                <!-- Redes sociais -->
+                <div class="footer-socials">
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Links de atendimento -->
+            <div class="footer-column">
+
+                <h3>Atendimento</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Links institucionais -->
+            <div class="footer-column">
+
+                <h3>Institucional</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Métodos de pagamento -->
+            <div class="footer-column">
+
+                <h3>Pagamento</h3>
+
+                <p>Aceitamos as principais bandeiras:</p>
+
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Direitos autorais -->
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 VoxTech Eletrônicos Ltda.
+                Todos os direitos reservados.
+                Projeto Acadêmico UNIP (PIM).
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- Plugin de acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Script principal do sistema -->
+    <script src="script.js"></script>
+
+</body>
+</html>

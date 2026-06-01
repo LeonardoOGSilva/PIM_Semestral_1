@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxTech - Detalhes do Produto</title>
+    <!-- Estilos globais e ícones Font Awesome para o layout de produto -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho com marca, busca e navegação para funcionalidades principais -->
+    <header class="header">
+        <a href="index.html" class="logo">Vox<span>Tech</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="favoritos.html" style="color: inherit;"><i class="fas fa-heart" title="Favoritos"></i></a>
+            <a href="acessibilidade.html" style="color: inherit;"><i class="fas fa-universal-access" title="Acessibilidade"></i></a>
+            <a href="carrinho.html" style="color: inherit;"><i class="fas fa-shopping-cart" title="Carrinho"></i></a>
+            <a href="login.html" style="color: inherit;"><i class="fas fa-user" title="Perfil"></i></a>
+        </div>
+    </header>
+
+    <!-- Navegação secundária para retornar à lista de produtos -->
+    <nav class="sub-nav">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+    </nav>
+
+    <!-- Conteúdo principal da página de produto com galeria e detalhes de compra -->
+    <main class="product-details">
+        <!-- Seção de galeria e informações principais do produto -->
+        <section class="gallery-column">
+            <div class="gallery-controls">
+                <i class="far fa-heart fav-icon" title="Favoritar"></i>
+                <i class="fas fa-share-alt share-icon" title="Compartilhar"></i>
+            </div>
+            <div class="main-image-container">
+                <i class="fas fa-chevron-left prev-arrow"></i>
+                <img src="Imagens/notebook-acer-nitro.png" alt="Notebook Acer Nitro" id="main-product-image">
+                <i class="fas fa-chevron-right next-arrow"></i>
+            </div>
+            <div class="thumbnail-container">
+                <img src="Imagens/notebook-acer-nitro.png" alt="Miniatura 1" class="thumbnail active">
+                <img src="Imagens/notebook-acer-nitro-2.png" alt="Miniatura 2" class="thumbnail">
+                <img src="Imagens/notebook-acer-nitro-3.png" alt="Miniatura 3" class="thumbnail">
+                <img src="Imagens/notebook-acer-nitro-4.png" alt="Miniatura 4" class="thumbnail">
+                <img src="Imagens/notebook-acer-nitro-5.png" alt="Miniatura 5" class="thumbnail">
+            </div>
+            <h2 id="produto-nome" class="produto-nome">Notebook Acer Nitro V15</h2>
+            <p class="product-description" id="produto-descricao">
+                Notebook Acer Nitro V15 ANV15-41-R4Q9 R77735HS AMD Ryzen 7, 32GB, 512GB SSD, NVIDIA RTX 4050, 15.6" FHD LED, IPS, AGP05 - NH.U20AL.002
+            </p>
+        </section>
+
+        <!-- Coluna de compra com preço, ações e cálculo de frete -->
+        <aside class="purchase-column">
+            <div class="purchase-card">
+                <h2 class="price" id="produto-preco">R$ 7.699,00</h2>
+                <p class="payment-info">À vista ou no pix</p>
+                <p class="installments">ou 8.599,00 em até 10x sem juros</p>
+                <div class="action-buttons">
+                    <button class="buy-now-btn">Comprar Agora</button>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="shipping-section">
+                <h3>Calcular frete</h3>
+                <div class="shipping-input-container">
+                    <i class="fas fa-truck shipping-icon"></i>
+                    <div class="cep-input-wrapper">
+                        <input type="text" placeholder="Insira o CEP*" class="cep-input">
+                        <i class="fas fa-search cep-search-icon"></i>
+                    </div>
+                    <button class="shipping-search-btn">Pesquisar</button>
+                </div>
+                <div class="frete-resultado" style="display: none; margin-top: 15px; padding: 10px; background-color: var(--surface-hover); border-radius: 8px; font-size: 14px;"></div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Rodapé com informações institucionais, redes sociais e formas de pagamento -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Vox<span>Tech</span></h3>
+                <p>A sua loja definitiva de hardware e periféricos de alta performance. Desenvolvido para gamers e profissionais exigentes.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Pagamento</h3>
+                <p>Aceitamos as principais bandeiras:</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoxTech Eletrônicos Ltda. Todos os direitos reservados. Projeto Acadêmico UNIP (PIM).</p>
+        </div>
+    </footer>
+    <!-- Plugin VLibras para acesso em Libras e suporte de acessibilidade -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Script principal para interações dinâmicas na página de produto -->
+    <script src="script.js"></script>
+</body>
+</html>

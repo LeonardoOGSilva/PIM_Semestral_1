@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxTech - Meu Painel</title>
+    <!-- Ícones Font Awesome e estilos compartilhados do site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho com navegação global e acesso ao painel de usuário -->
+    <header class="header">
+        <a href="index.html" class="logo">Vox<span>Tech</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="favoritos.html" style="color: inherit;"><i class="fas fa-heart" title="Favoritos"></i></a>
+            <a href="acessibilidade.html" style="color: inherit;"><i class="fas fa-universal-access" title="Acessibilidade"></i></a>
+            <a href="carrinho.html" style="color: inherit;"><i class="fas fa-shopping-cart" title="Carrinho"></i></a>
+            <a href="perfil.html" style="color: inherit;"><i class="fas fa-user" title="Perfil"></i></a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <nav class="sub-nav">
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar à Loja</a>
+        </nav>
+
+        <!-- Layout do painel do usuário com menu lateral e conteúdo principal -->
+        <div class="profile-layout">
+            <!-- Menu lateral do perfil com informações do usuário e navegação interna -->
+            <aside class="profile-sidebar">
+                <div class="profile-user-info">
+                    <div class="profile-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h3 id="nome-usuario">Olá, Usuário!</h3>
+                    <p>Cliente desde 2026</p>
+                </div>
+                <nav class="profile-menu">
+                    <a href="#" class="profile-link active"><i class="fas fa-box-open"></i> Meus Pedidos</a>
+                    <a href="#" class="profile-link"><i class="fas fa-id-card"></i> Meus Dados</a>
+                    <a href="#" class="profile-link"><i class="fas fa-map-marker-alt"></i> Endereços</a>
+                    <a href="#" class="profile-link"><i class="fas fa-shield-alt"></i> Segurança</a>
+                    <a href="login.html"
+                        class="profile-link logout"
+                        onclick="localStorage.removeItem('usuarioNome')"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </nav>
+            </aside>
+
+            <!-- Conteúdo principal do perfil exibindo histórico de pedidos -->
+            <section class="profile-content">
+                <h2 class="profile-title">Meus Pedidos</h2>
+                
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span class="order-number">Pedido #89234</span>
+                            <span class="order-date">Realizado em: 15/05/2026</span>
+                        </div>
+                        <div class="order-status status-delivered">
+                            <i class="fas fa-check-circle"></i> Entregue
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <img src="Imagens/notebook-acer-nitro.png" alt="Notebook Acer">
+                        <div class="order-details">
+                            <h4>Notebook Acer Nitro V15</h4>
+                            <p>Quantidade: 1</p>
+                            <p class="order-price">Total: R$ 7.699,00</p>
+                        </div>
+                        <button class="btn-comprar" style="width: auto; padding: 10px 20px;">Comprar Novamente</button>
+                    </div>
+                </div>
+
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <span class="order-number">Pedido #89112</span>
+                            <span class="order-date">Realizado em: 02/04/2026</span>
+                        </div>
+                        <div class="order-status status-transit">
+                            <i class="fas fa-truck"></i> Em trânsito
+                        </div>
+                    </div>
+                    <div class="order-body">
+                        <img src="Imagens/HeadsetGamer.png" alt="Headset">
+                        <div class="order-details">
+                            <h4>Headset Gamer 7.1</h4>
+                            <p>Quantidade: 1</p>
+                            <p class="order-price">Total: R$ 280,00</p>
+                        </div>
+                        <button class="btn-comprar" style="width: auto; padding: 10px 20px;">Rastrear Entrega</button>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé com informações da marca, canais de atendimento e métodos de pagamento -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Vox<span>Tech</span></h3>
+                <p>A sua loja definitiva de hardware e periféricos de alta performance. Desenvolvido para gamers e profissionais exigentes.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Pagamento</h3>
+                <p>Aceitamos as principais bandeiras:</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoxTech Eletrônicos Ltda. Todos os direitos reservados. Projeto Acadêmico UNIP (PIM).</p>
+        </div>
+    </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Script principal e rotina de atualização do nome do usuário no painel -->
+    <script src="script.js"></script>
+    <script>
+        const nomeUsuario = localStorage.getItem('usuarioNome');
+
+        if (nomeUsuario) {
+
+            document.getElementById('nome-usuario')
+                .innerText = `Olá, ${nomeUsuario}!`;
+        }
+
+    </script>
+</body>
+</html>

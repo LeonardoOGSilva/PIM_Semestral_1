@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxTech - Carrinho</title>
+    <!-- Ícones e estilos globais do site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/Icon.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabeçalho com logo, pesquisa e links de navegação rápida -->
+    <header class="header">
+        <a href="index.html" class="logo">Vox<span>Tech</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Busque aqui...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="favoritos.html" style="color: inherit;"><i class="fas fa-heart" title="Favoritos"></i></a>
+            <a href="acessibilidade.html" style="color: inherit;"><i class="fas fa-universal-access" title="Acessibilidade"></i></a>
+            <a href="carrinho.html" style="color: inherit;"><i class="fas fa-shopping-cart" title="Carrinho"></i></a>
+            <a href="login.html" style="color: inherit;"><i class="fas fa-user" title="Perfil"></i></a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <nav class="sub-nav">
+            <a href="produto.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
+        </nav>
+
+        <!-- Seção principal do carrinho contendo itens e opções de compra -->
+        <section class="cart-section">
+            <h2 class="section-title-cart">Produtos</h2>
+
+            <!-- Bloco de item do carrinho com imagem, controle de quantidade e valores -->
+            <div class="cart-item">
+                <div class="cart-item-img">
+                    <img src="Imagens\notebook-acer-nitr.png" alt="Notebook Acer Nitro">
+                </div>
+                <div class="cart-item-info">
+                    <h3>Notebook Acer Nitro V15 ANV15-41-R4Q9 R77735HS AMD Ryzen 7, 32GB, 512GB SSD...</h3>
+                    <div class="quantity-controls">
+                        <button class="qty-btn" id="minus">-</button>
+                        <input type="number" value="1" id="qty-input" readonly>
+                        <button class="qty-btn" id="plus">+</button>
+                    </div>
+                    <div class="shipping-info-small">
+                        <i class="fas fa-truck"></i> <span>Frete</span>
+                    </div>
+                </div>
+                <div class="cart-item-price-area">
+                    <button class="delete-item"><i class="far fa-trash-alt"></i></button>
+                    <div class="price-tags">
+                        <h2 class="price-main">R$ 7.699,00 <span>no pix</span></h2>
+                        <p class="price-sub">ou 8.599,00 em até 10x sem juros</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculadora de frete com entrada de CEP e área para resultado dinâmico -->
+            <div class="shipping-calculator-cart">
+                <div class="shipping-bar">
+                    <i class="fas fa-truck"></i>
+                    <input type="text" placeholder="Insira o CEP*">
+                    <i class="fas fa-search"></i>
+                    <button class="btn-pesquisa-cep">pesquise</button>
+                </div>
+                <div class="frete-resultado" style="display: none; margin-top: 15px; padding: 15px; background-color: var(--surface); border: 1px solid var(--border-color); border-radius: 8px; font-size: 14px; max-width: 600px;"></div>
+            </div>
+
+            <!-- Opções de garantia estendida para o produto selecionado -->
+            <div class="warranty-container">
+                <h3><i class="fas fa-shield-alt"></i> Garantia Estendida</h3>
+                <div class="warranty-options">
+                    <label class="warranty-card">
+                        <input type="radio" name="garantia" checked>
+                        <span class="warranty-text">Sem Garantia.</span>
+                    </label>
+                    <label class="warranty-card">
+                        <input type="radio" name="garantia">
+                        <span class="warranty-text">12 meses de garantia estendida.</span>
+                        <span class="warranty-price">Até 10x sem juros de R$ 134,19</span>
+                    </label>
+                    <label class="warranty-card">
+                        <input type="radio" name="garantia">
+                        <span class="warranty-text">24 meses de garantia estendida.</span>
+                        <span class="warranty-price">Até 10x sem juros de R$ 145,78</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Ação final do carrinho para avançar ao próximo passo da compra -->
+            <div class="cart-footer">
+                <button class="btn-continuar-cart">Continuar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Vox<span>Tech</span></h3>
+                <p>A sua loja definitiva de hardware e periféricos de alta performance. Desenvolvido para gamers e profissionais exigentes.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Prazos de Entrega</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Pagamento</h3>
+                <p>Aceitamos as principais bandeiras:</p>
+                <div class="footer-payments">
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-pix" title="Pix"></i>
+                    <i class="fas fa-barcode" title="Boleto"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoxTech Eletrônicos Ltda. Todos os direitos reservados. Projeto Acadêmico UNIP (PIM).</p>
+        </div>
+    </footer>
+    <!-- Plugin VLibras para tradução de conteúdo em Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Script principal do site, responsável por interações e ajustes de interface -->
+    <script src="script.js"></script>
+</body>
+</html>
