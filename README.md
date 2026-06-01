@@ -192,6 +192,8 @@ Projeto desenvolvido para a disciplina Projeto Integrado Multidisciplinar (PIM) 
 
 - Leonardo Oliveira Gomes da Silva
 - Gustavo Henrique
+- Gustavo Pereira Celso
+- Jandson Jose da Silva
 
 ---
 
